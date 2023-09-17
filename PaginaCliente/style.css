@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vh;
+    background: linear-gradient(rgb(53, 53, 115), rgb(35, 39, 91)); 
+}
+.search-box {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    width: 350px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #cdcdcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #232323;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomeWebLog{
+    color: #cdcdcd;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 9%;
+    left: 16%;
+}
+
+.Logo{
+   position: absolute;
+   top: 5%;
+   left: 5%;
+}
+
+.nomedapagina{
+    position: absolute;
+    color: #cdcdcd;
+    left: 15%;
+}
+
+.iconUserHome{
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    width: 30px;
+}
+
+.iconUserInfo{
+    position: absolute;
+    top: 8%;
+    right: 12%;
+    color: #cdcdcd;
+}
+.iconUserInfo a {
+    color: #cdcdcd;
+    text-decoration: none;
+    transition: all ease .3s;
+}
+
+.iconUserInfo a:hover {
+    color: #999;
+}
+.menu {
+    margin-left: 17%;
+    margin-top: 20%;
+}
+
+.menu .menu-faketrigger {
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px; 
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu .menu-lines{
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+
+.menu .menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #cdcdcd;
+    border-radius: 3px;
+    transition: all ease .2s;
+}
+
+.menu .menu-faketrigger:checked ~ .menu-lines span{
+    background-color: #232323;
+}
+
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.25);
+}
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+    opacity: 0;
+}
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1.25);
+}
+
+.menu ul {
+    position: absolute;
+    z-index: 998;
+    left: 0%;
+    top: 17%;
+    width: 180px;
+    height: calc(100vh - 50px);
+    padding-top: 100px;
+    margin-left: -300px;
+    transition: all ease .2s;
+    border-radius: 4px;
+    background-color: #ededed
+    
+}
+
+.menu-faketrigger:checked ~ ul {
+    margin-left: 0;
+}
+
+.menu ul li {
+    padding: 10px 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    transition: all ease .3s;
+}
+
+.menu ul li a:hover {
+    color: #999;
+}
