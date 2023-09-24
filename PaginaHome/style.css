@@ -8,7 +8,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     width: 100vh;
-    background: linear-gradient(rgb(53, 53, 115), rgb(35, 39, 91));
+    background-image: linear-gradient(rgb(34,29,51), rgb(11,11,34));
     
 }
 
@@ -212,7 +212,7 @@ body{
     left: 0%;
     top: 17%;
     width: 180px;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 80px);
     padding-top: 100px;
     margin-left: -300px;
     transition: all ease .2s;

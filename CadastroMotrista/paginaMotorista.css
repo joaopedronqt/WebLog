@@ -139,7 +139,7 @@ body{
     left: 0%;
     top: 17%;
     width: 180px;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 80px);
     padding-top: 100px;
     margin-left: -300px;
     transition: all ease .2s;
@@ -170,11 +170,11 @@ body{
 /*===============FORMULARIO===============*/
 
 .formulario{
-    position: center;
-    top: 20%;
-    left: 30%;
+    position:absolute;
+    top: 30%;
+    left: 23%;
     width: 800px;
-    height: 400px;
+    height: 500px;
     padding: 10px;
     border-radius: 40px;
     display: flex;
@@ -213,6 +213,7 @@ body{
     border-color: rgb(255, 137, 137);
     color: rgb(255, 47, 47);
     background-color: rgba(255, 211, 211, 0.349);
+    cursor: pointer;
   }
 
   #edi {
@@ -224,6 +225,7 @@ body{
     border-color: rgb(255, 229, 113);
     color: rgb(255, 198, 40);
     background-color: rgba(248, 255, 181, 0.363);
+    cursor: pointer;
   }
 
   #inc {
@@ -234,6 +236,7 @@ body{
     border: none;
     color: white;
     background-color: rgb(180, 255, 136);
+    cursor: pointer;
   }
   
   .divTable {
