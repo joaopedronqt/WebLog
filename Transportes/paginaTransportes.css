@@ -205,6 +205,8 @@ body{
   }
   
   #rem {
+    position: absolute;
+    left: 43%;
     font-size: 16px;
     font-weight: bold;
     padding: 8px;
@@ -217,6 +219,8 @@ body{
   }
 
   #edi {
+    position: absolute;
+    left: 64%;
     font-size: 16px;
     font-weight: bold;
     padding: 8px;
@@ -229,6 +233,8 @@ body{
   }
 
   #inc {
+    position: absolute;
+    left: 83%;
     font-size: 16px;
     font-weight: bold;
     padding: 8px;

@@ -203,8 +203,12 @@ body{
     word-break: break-all;
     justify-content: space-between;
   }
+
+
   
   #rem {
+    position: absolute;
+    left: 43%;
     font-size: 16px;
     font-weight: bold;
     padding: 8px;
@@ -217,6 +221,8 @@ body{
   }
 
   #edi {
+    position: absolute;
+    left: 64%;
     font-size: 16px;
     font-weight: bold;
     padding: 8px;
@@ -229,6 +235,8 @@ body{
   }
 
   #inc {
+    position: absolute;
+    left: 83%;
     font-size: 16px;
     font-weight: bold;
     padding: 8px;
@@ -236,7 +244,7 @@ body{
     border: none;
     color: white;
     background-color: rgb(180, 255, 136);
-    cursor: pointer;
+    
   }
   
   .divTable {
