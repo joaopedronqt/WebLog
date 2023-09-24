@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vh;
+    background-image: linear-gradient(rgb(34,29,51), rgb(11,11,34)); 
+}
+.search-box {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    width: 350px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #cdcdcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #232323;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomeWebLog{
+    color: #cdcdcd;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 9%;
+    left: 16%;
+}
+
+.Logo{
+   position: absolute;
+   top: 5%;
+   left: 5%;
+}
+
+.nomedapagina{
+    position: absolute;
+    color: #cdcdcd;
+    left: 15%;
+}
+
+.iconUserHome{
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    width: 30px;
+}
+
+.iconUserInfo{
+    position: absolute;
+    top: 8%;
+    right: 12%;
+    color: #cdcdcd;
+}
+.iconUserInfo a {
+    color: #cdcdcd;
+    text-decoration: none;
+    transition: all ease .3s;
+}
+
+.iconUserInfo a:hover {
+    color: #999;
+}
+.menu {
+    margin-left: 17%;
+    margin-top: 20%;
+}
+
+.menu .menu-faketrigger {
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px; 
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu .menu-lines{
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+
+.menu .menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #cdcdcd;
+    border-radius: 3px;
+    transition: all ease .2s;
+}
+
+.menu .menu-faketrigger:checked ~ .menu-lines span{
+    background-color: #232323;
+}
+
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.25);
+}
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+    opacity: 0;
+}
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1.25);
+}
+
+.menu ul {
+    position: absolute;
+    z-index: 998;
+    left: 0%;
+    top: 17%;
+    width: 180px;
+    height: calc(100vh - 50px);
+    padding-top: 100px;
+    margin-left: -300px;
+    transition: all ease .2s;
+    border-radius: 4px;
+    background-color: #ededed
+    
+}
+
+.menu-faketrigger:checked ~ ul {
+    margin-left: 0;
+}
+
+.menu ul li {
+    padding: 10px 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    transition: all ease .3s;
+}
+
+.menu ul li a:hover {
+    color: #999;
+}
+
+/*===============FORMULARIO===============*/
+
+.formulario{
+    position: center;
+    top: 20%;
+    left: 30%;
+    width: 800px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    background: white;
+  }
+  
+  .header {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 12px;
+  }
+  
+  .header span {
+    font-weight: 900;
+    font-size: 20px;
+    word-break: break-all;
+    justify-content: space-between;
+  }
+  
+  #rem {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+    border: 12px;
+    border-color: rgb(255, 137, 137);
+    color: rgb(255, 47, 47);
+    background-color: rgba(255, 211, 211, 0.349);
+  }
+
+  #edi {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border: 12px;
+    border-radius: 5px;
+    border-color: rgb(255, 229, 113);
+    color: rgb(255, 198, 40);
+    background-color: rgba(248, 255, 181, 0.363);
+  }
+
+  #inc {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(180, 255, 136);
+  }
+  
+  .divTable {
+    padding: 10px;
+    width: auto; 
+    height:inherit; 
+    overflow:auto;
+  }
+  
+  .divTable::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke; 
+  }
+  
+  .divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgray; 
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: whitesmoke;
+  }
+  
+  tr {
+    border-bottom: 1px solid rgb(238, 235, 235)!important;
+  }
+  
+  tbody tr td {
+    vertical-align: text-top;
+    padding: 6px;
+    max-width: 50px;
+  }
+  
+  thead tr th {
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+  }
+  
+  tbody tr {
+    margin-bottom: 50px;
+  }
+  
+  thead tr th.acao {
+    width: 100px!important;
+    text-align: center;
+  }
+  
+  tbody tr td.acao {
+    text-align: center;
+  }
+  
+  @media (max-width: 700px) {
+    body {
+      font-size: 10px;
+    }
+    
+    .header span {
+      font-size: 15px;
+    }
+  
+    #new {
+      padding: 5px;
+      font-size: 10px;
+    }
+  
+    thead tr th.acao {
+      width: auto!important;
+    }
+    
+    td button i {
+      font-size: 20px!important;
+    }
+  
+    td button i:first-child {
+      margin-right: 0;
+    }
+  
+    .modal {
+      width: 90%!important;
+    }
+  
+    .modal label {
+      font-size: 12px!important;
+    }
+  }
+  
+  .modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+  }
+  
+  .modal label {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .modal input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px; 
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .modal button {
+    width: 100%;
+    margin: 10px auto;
+    outline: none;
+    border-radius: 20px; 
+    padding: 5px 10px; 
+    width: 100%;
+    border: none;
+    background-color: rgb(57, 57, 226);
+    color: white;
+  }
+  
+  .active {
+    display: flex;
+  }
+  
+  .active .modal {
+    animation: modal .4s;
+  }
+  
+  @keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  td button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  td button i {
+    font-size: 25px;
+  }
+  
+  td button i:first-child {
+    margin-right: 10px;
+  }
