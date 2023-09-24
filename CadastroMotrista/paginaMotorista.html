@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cliente</title>
-    <link rel="stylesheet" href="paginaCliente.css">
+    <title>Motorista</title>
+    <link rel="stylesheet" href="paginaMotorista.css">
     <link rel="shortcut icon" href="../PaginaHome/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
 </head>
 <body>
     <nav class="menu">
@@ -37,7 +39,7 @@
     </div> 
 
     <div class="nomedapagina">
-        <h2>Pagina do Cliente</h2>
+        <h2>Cadastrar Motorista</h2>
     </div>
 
     <div class="iconUserHome">
@@ -55,50 +57,52 @@
             <img src="../PaginaHome/LogoWebLog2.png" alt="imgLogo" height="100">
         </a>
     </div>
-    
+
     <div class="formulario">
         <div class="container">
             <div class="header">
-                <span>Cadastro de Clientes</span>
+                <span>Transportes</span>
                 <button onclick="openModal()" id="rem">Remover</button>
-                <button onclick="openModal()" id="edi">Editar</button> 
-                <button onclick="openModal()" id="inc">Incluir</button>  
+                <button onclick="openModal()" id="edi">Editar</button>
+                <button onclick="openModal()" id="inc">Incluir</button>
             </div>
-            
+
             <div class="divTable">
                 <table>
                     <thead>
                         <tr>
-                            <th>Matricula</th>
-                            <th>Nome Empresa</th>
+                            <th>Matrícula</th>
+                            <th>Nome</th>
                             <th>Endereço</th>
-                            <th>Contato</th>
+                            <th>Data de Nascimento</th>
+                            <th>Transportadora</th>
                         </tr>
                     </thead>
                 </table>
             </div>
-    
+
             <div class="modal-container">
                 <div class="modal">
                     <form>
                         <label for="m-matricula">Matricula</label>
-                        <input type="text" id="m-nome" placeholder="Nome do motorista" required>
-    
-                        <label for="m-nomeEmpresa">Nome Empresa</label>
-                        <input type="text" id="m-cpf" placeholder="CPF do motorista" required>
-    
+                        <input type="text" id="m-nome" placeholder="Matrícula do motorista" required>
+
+                        <label for="m-nome">Nome</label>
+                        <input type="text" id="m-cpf" placeholder="Nome Completo do motorista" required>
+
                         <label for="m-endereco">Endereço</label>
-                        <input type="text" id="m-telefone" placeholder="Telefone do motorista" required>
- 
-                        <label for="m-contato">Contato</label>
-                        <input type="text" id="m-telefone" placeholder="Telefone do motorista" required>
+                        <input type="text" id="m-telefone" placeholder="Endereço do motorista" required>
+
+                        <label for="m-dataNascimento">DataNascimento</label>
+                        <input type="text" id="m-dataNascimento" placeholder="Data de Nascimento do Motorista" required>
+
+                        <label for="m-transportadora">Transportadora</label>
+                        <input type="text" id="m-transportadora" placeholder="Transportadora do motorista" required>
 
                         <button id="btnSalvar">Salvar</button>
                     </form>
                 </div>
             </div>
         </div>
-
-
 </body>
 </html>

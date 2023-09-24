@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cliente</title>
-    <link rel="stylesheet" href="paginaCliente.css">
+    <title>Logística</title>
+    <link rel="stylesheet" href="paginaTransportes.css">
     <link rel="shortcut icon" href="../PaginaHome/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+
+    <!----------------NAVBAR---------------->
+
     <nav class="menu">
         <input type="checkbox" class="menu-faketrigger">
         <div class="menu-lines">
@@ -20,9 +25,9 @@
             <li><a href="../CadastroMotrista/paginaMotorista.html">Cadastro Motorista</a></li> 
             <li><a href="../PaginaCliente/paginaCliente.html">Pagina Cliente</a></li> 
             <li><a href="../Transportes/paginaTransportes.html">Transportes</a></li>
-
         </ul>
     </nav>
+    <!----------------end-NAVBAR---------------->
 
     <div class="search-box">
         <input type="text" class="search-txt" placeholder="Pesquisar">
@@ -31,13 +36,13 @@
 
         </a>
     </div>
-   
+
     <div class="nomeWebLog">
         <h2>Web Log</h2>
-    </div> 
+    </div>
 
     <div class="nomedapagina">
-        <h2>Pagina do Cliente</h2>
+        <h2>Transportes</h2>
     </div>
 
     <div class="iconUserHome">
@@ -55,42 +60,46 @@
             <img src="../PaginaHome/LogoWebLog2.png" alt="imgLogo" height="100">
         </a>
     </div>
-    
+
     <div class="formulario">
         <div class="container">
             <div class="header">
-                <span>Cadastro de Clientes</span>
+                <span>Transportes</span>
                 <button onclick="openModal()" id="rem">Remover</button>
-                <button onclick="openModal()" id="edi">Editar</button> 
-                <button onclick="openModal()" id="inc">Incluir</button>  
+                <button onclick="openModal()" id="edi">Editar</button>
+                <button onclick="openModal()" id="inc">Incluir</button>
             </div>
-            
+
             <div class="divTable">
                 <table>
                     <thead>
                         <tr>
-                            <th>Matricula</th>
-                            <th>Nome Empresa</th>
+                            <th>Transporte</th>
+                            <th>Data Entrega</th>
                             <th>Endereço</th>
-                            <th>Contato</th>
+                            <th>Motorista</th>
+                            <th>Placa</th>
                         </tr>
                     </thead>
                 </table>
             </div>
-    
+
             <div class="modal-container">
                 <div class="modal">
                     <form>
-                        <label for="m-matricula">Matricula</label>
+                        <label for="m-transporte">Transporte</label>
                         <input type="text" id="m-nome" placeholder="Nome do motorista" required>
-    
-                        <label for="m-nomeEmpresa">Nome Empresa</label>
+
+                        <label for="m-data">Data Entrega</label>
                         <input type="text" id="m-cpf" placeholder="CPF do motorista" required>
-    
+
                         <label for="m-endereco">Endereço</label>
                         <input type="text" id="m-telefone" placeholder="Telefone do motorista" required>
- 
-                        <label for="m-contato">Contato</label>
+
+                        <label for="m-motorista">Motorista</label>
+                        <input type="text" id="m-telefone" placeholder="Telefone do motorista" required>
+
+                        <label for="m-placa">Placa</label>
                         <input type="text" id="m-telefone" placeholder="Telefone do motorista" required>
 
                         <button id="btnSalvar">Salvar</button>
@@ -98,7 +107,7 @@
                 </div>
             </div>
         </div>
-
-
+    </div>
 </body>
+
 </html>
