@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cliente</title>
-    <link rel="stylesheet" href="paginaCliente.css">
+    <title>Logística</title>
+    <link rel="stylesheet" href="paginaVeiculo.css">
     <link rel="shortcut icon" href="../PaginaHome/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+
+    <!----------------NAVBAR---------------->
+
     <nav class="menu">
         <input type="checkbox" class="menu-faketrigger">
         <div class="menu-lines">
@@ -17,12 +22,12 @@
         </div>
         <ul>
             <li><a href="../PaginaHome/PaginaHome.html">Home</a></li>
-            <li><a href="../CadastroMotrista/paginaMotorista.html">Cadastro de Motorista</a></li> 
-            <li><a href="../PaginaCliente/paginaCliente.html">Cadastro de/ Cliente</a></li> 
+            <li><a href="../CadastroMotrista/paginaMotorista.html">Cadastro Motorista</a></li> 
+            <li><a href="../PaginaCliente/paginaCliente.html">Pagina Cliente</a></li> 
             <li><a href="../Transportes/paginaTransportes.html">Transportes</a></li>
-
         </ul>
     </nav>
+    <!----------------end-NAVBAR---------------->
 
     <div class="search-box">
         <input type="text" class="search-txt" placeholder="Pesquisar">
@@ -31,13 +36,13 @@
 
         </a>
     </div>
-   
+
     <div class="nomeWebLog">
         <h2>Web Log</h2>
-    </div> 
+    </div>
 
     <div class="nomedapagina">
-        <h2>Pagina Cliente</h2>
+        <h2>Veículos</h2>
     </div>
 
     <div class="iconUserHome">
@@ -60,24 +65,20 @@
         <div class="container">
             <div class="header">
                 
-                    <span>Clientes</span>
+                    <span>Veículos</span>
                     <input type="reset" value="Remover" id="rem">
                     <input type="reset" value="Editar" id="edi">
                     <button onclick="openModal()" id="inc">Incluir</button>
             
             </div>
 
-            <div class="divTable">
+            <div class="divle">
                 <table>
                     <thead>
                         <tr>
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Email </th>
-                            <th>Telefone</th>
-                            <th>CNPJ  </th>
-                            <th>CPF</th>
-                            <th>Endereço</th>
+                            <th>Cod. Veículo</th>
+                            <th>Placa</th>
+                            <th>Modelo</th>
                         </tr>
                     </thead>
                 </table>
@@ -86,28 +87,14 @@
             <div class="modal-container">
                 <div class="modal">
                     <form>
-                        <label for="m-matricula">Matricula</label>
-                        <input type="text" id="m-matricula" placeholder="ex: 229132" required>
+                        <label for="m-cod"> Código Veiculo</label>
+                        <input type="text" id="m-cod" placeholder="ex: 1253" required>
 
-                        <label for="m-nome">Nome da Empresa</label>
-                        <input type="text" id="m-nomeEmpresa" placeholder="ex: Produtos Conceição" required>
-
-                        <label for="m-nome">Email Cliente</label>
-                        <input type="text" id="m-nomeEmpresa" placeholder="ex: Produtos Conceição" required>
-
-                        <label for="m-telefone">Contato</label>
-                        <input type="text" id="m-telefone" placeholder="Ex: 11 99999-9999" required>
-
-                        <label for="m-cnpj">CNPJ</label>
-                        <input type="text" id="m-cnpj" placeholder="Ex: 11 99999-9999" required>
-
-                        <label for="m-cpf">CPF</label>
-                        <input type="text" id="m-cpf" placeholder="Ex: 11 99999-9999" required>
-
-                        <label for="m-endereco">Endereço</label>
-                        <input type="text" id="m-endereco" placeholder="ex: Rua das Pitangas Vermelhas" required>
-
+                        <label for="m-placa">Placa</label>
+                        <input type="text" id="m-placa" placeholder="Ex: BRA2E19" required>
                         
+                        <label for="m-modelo">Modelo</label>
+                        <input type="text" id="m-modelo" placeholder="Ex: Carreta" required>
 
                         <button id="btnSalvar">Salvar</button>
                     </form>
@@ -115,8 +102,7 @@
             </div>
         </div>
     </div>
-    <script src="formCliente.js"></script>
-
-
+    <script src="formVeiculo.js"></script>
 </body>
+
 </html>
