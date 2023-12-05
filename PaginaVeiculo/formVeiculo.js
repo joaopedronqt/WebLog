@@ -1,9 +1,8 @@
 const modal = document.querySelector('.modal-container');
 const tbody = document.querySelector('tbody');
-const sMatricula = document.querySelector('#m-matricula');
-const sNomeEmpresa = document.querySelector('#m-nomeEmpresa');
-const sEndereco = document.querySelector('#m-endereco')
-const sContato = document.querySelector('#m-contato')
+const sCod = document.querySelector('#m-cod');
+const sPlaca = document.querySelector('#m-placa');
+const sModelo = document.querySelector('#m-modelo')
 
 let itens
 let id
@@ -18,14 +17,14 @@ function openModal(edit = false, index = 0) {
         }
 
         if (edit) {
-            sNome.value = itens[index].nome
-            sFuncao.value = itens[index].funcao
-            sSalario.value = itens[index].salario
+            sCod.value = itens[index].cod
+            sPlaca.value = itens[index].placa
+            sModelo.value = itens[index].modelo
             id = index
           } else {
-            sNome.value = ''
-            sFuncao.value = ''
-            sSalario.value = ''
+            sCod.value = ''
+            sPlaca.value = ''
+            sModelo.value = ''
           }
           
         }
@@ -45,9 +44,9 @@ function openModal(edit = false, index = 0) {
           let tr = document.createElement('tr')
         
           tr.innerHTML = `
-            <td>${item.nome}</td>
-            <td>${item.funcao}</td>
-            <td>R$ ${item.salario}</td>
+            <td>${item.cod}</td>
+            <td>${item.placa}</td>
+            <td>R$ ${item.modelo}</td>
             <td class="acao">
               <button onclick="editItem(${index})"><i class='bx bx-edit' ></i></button>
             </td>
@@ -60,18 +59,18 @@ function openModal(edit = false, index = 0) {
         
         btnSalvar.onclick = e => {
           
-          if (sNome.value == '' || sFuncao.value == '' || sSalario.value == '') {
+          if (sCod.value == '' || sPlaca.value == '' || sModelo.value == '') {
             return
           }
         
           e.preventDefault();
         
           if (id !== undefined) {
-            itens[id].nome = sNome.value
-            itens[id].funcao = sFuncao.value
-            itens[id].salario = sSalario.value
+            itens[id].cod = sCod.value
+            itens[id].placa = sPlaca.value
+            itens[id].modelo = sModelo.value
           } else {
-            itens.push({'nome': sNome.value, 'funcao': sFuncao.value, 'salario': sSalario.value})
+            itens.push({'cod': sCod.value, 'placa': sPlaca.value, 'modelo': sModelo.value})
           }
         
           setItensBD()
