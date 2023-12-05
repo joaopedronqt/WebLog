@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Motorista</title>
+    <link rel="stylesheet" href="paginaMotorista.css">
+    <link rel="shortcut icon" href="../PaginaHome/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+</head>
+<body>
+    <nav class="menu">
+        <input type="checkbox" class="menu-faketrigger">
+        <div class="menu-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="../PaginaHome/PaginaHome.html">Home</a></li>
+            <li><a href="../CadastroMotrista/paginaMotorista.html">Página Motorista</a></li> 
+            <li><a href="../PaginaCliente/paginaCliente.html">Pagina Cliente</a></li> 
+            <li><a href="../Transportes/paginaTransportes.html">Transportes</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="search-box">
+        <input type="text" class="search-txt" placeholder="Pesquisar">
+        <a href="#" class="search-btn">
+            <img src="../PaginaHome/loupe.png" alt="Lupa" height="20" width="20">
+
+        </a>
+    </div>
+   
+    <div class="nomeWebLog">
+        <h2>Web Log</h2>
+    </div> 
+
+    <div class="nomedapagina">
+        <h2>Pagina Motorista</h2>
+    </div>
+
+    <div class="iconUserHome">
+        <img src="../PaginaHome/iconUserHome.png" alt="Icon User" height="45">
+    </div>
+
+    <div class="iconUserInfo">
+        <h3>User name</h3>
+        <h3><a href="../PaginaHome/PaginaHome.html">Home</a> | UserId</h3>
+    </div>
+
+    <div class="Logo">
+
+        <a href="../PaginaHome/PaginaHome.html">
+            <img src="../PaginaHome/LogoWebLog2.png" alt="imgLogo" height="100">
+        </a>
+    </div>
+
+    <div class="formulario">
+        <div class="container">
+            <div class="header">
+                
+                    <span>Motoristas</span>
+                    <input type="reset" value="Remover" id="rem">
+                    <input type="reset" value="Editar" id="edi">
+                    <button onclick="openModal()" id="inc">Incluir</button>
+            
+            </div>
+
+            <div class="divTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matrícula</th>
+                            <th>Nome</th>
+                            <th>CNH</th>
+                            <th>CPF</th>
+                            <th>Transportadora</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div class="modal-container">
+                <div class="modal">
+                    <form>
+                        <label for="m-matricula">Matricula do Motorista/Ajudante</label>
+                        <input type="text" id="m-matricula" placeholder="ex: 229132" required>
+
+                        <label for="m-nome">Nome Completo</label>
+                        <input type="text" id="m-nome" placeholder="ex: Evanilson Mendes Duarte" required>
+
+                        <label for="m-cnh">CNH</label>
+                        <input type="text" id="m-cnh" placeholder="ex: 0123456789" required>
+
+                        <label for="m-cpf">CPF</label>
+                        <input type="text" id="m-cpf" placeholder="ex: 01234567891" required>
+
+                        <label for="m-transportadora">Transportadora</label>
+                        <input type="text" id="m-transportadora" placeholder="Ex: WebLog Transportes LTDA" required>
+
+                        <button id="btnSalvar">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="formMotorista.js"></script>
+</body>
+</html>

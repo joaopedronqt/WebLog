@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <link rel="stylesheet" href="paginaCliente.css">
+    <link rel="shortcut icon" href="../PaginaHome/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="menu">
+        <input type="checkbox" class="menu-faketrigger">
+        <div class="menu-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="../PaginaHome/PaginaHome.html">Home</a></li>
+            <li><a href="../CadastroMotrista/paginaMotorista.html">Cadastro de Motorista</a></li> 
+            <li><a href="../PaginaCliente/paginaCliente.html">Cadastro de/ Cliente</a></li> 
+            <li><a href="../Transportes/paginaTransportes.html">Transportes</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="search-box">
+        <input type="text" class="search-txt" placeholder="Pesquisar">
+        <a href="#" class="search-btn">
+            <img src="../PaginaHome/loupe.png" alt="Lupa" height="20" width="20">
+
+        </a>
+    </div>
+   
+    <div class="nomeWebLog">
+        <h2>Web Log</h2>
+    </div> 
+
+    <div class="nomedapagina">
+        <h2>Pagina Cliente</h2>
+    </div>
+
+    <div class="iconUserHome">
+        <img src="../PaginaHome/iconUserHome.png" alt="Icon User" height="45">
+    </div>
+
+    <div class="iconUserInfo">
+        <h3>User name</h3>
+        <h3><a href="../PaginaHome/PaginaHome.html">Home</a> | UserId</h3>
+    </div>
+
+    <div class="Logo">
+
+        <a href="../PaginaHome/PaginaHome.html">
+            <img src="../PaginaHome/LogoWebLog2.png" alt="imgLogo" height="100">
+        </a>
+    </div>
+
+    <div class="formulario">
+        <div class="container">
+            <div class="header">
+                
+                    <span>Clientes</span>
+                    <input type="reset" value="Remover" id="rem">
+                    <input type="reset" value="Editar" id="edi">
+                    <button onclick="openModal()" id="inc">Incluir</button>
+            
+            </div>
+
+            <div class="divTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matrícula</th>
+                            <th>Nome</th>
+                            <th>Email </th>
+                            <th>Telefone</th>
+                            <th>CNPJ  </th>
+                            <th>CPF</th>
+                            <th>Endereço</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div class="modal-container">
+                <div class="modal">
+                    <form>
+                        <label for="m-matricula">Matricula</label>
+                        <input type="text" id="m-matricula" placeholder="ex: 229132" required>
+
+                        <label for="m-nome">Nome da Empresa</label>
+                        <input type="text" id="m-nomeEmpresa" placeholder="ex: Produtos Conceição" required>
+
+                        <label for="m-nome">Email Cliente</label>
+                        <input type="text" id="m-nomeEmpresa" placeholder="ex: Produtos Conceição" required>
+
+                        <label for="m-telefone">Contato</label>
+                        <input type="text" id="m-telefone" placeholder="Ex: 11 99999-9999" required>
+
+                        <label for="m-cnpj">CNPJ</label>
+                        <input type="text" id="m-cnpj" placeholder="Ex: 11 99999-9999" required>
+
+                        <label for="m-cpf">CPF</label>
+                        <input type="text" id="m-cpf" placeholder="Ex: 11 99999-9999" required>
+
+                        <label for="m-endereco">Endereço</label>
+                        <input type="text" id="m-endereco" placeholder="ex: Rua das Pitangas Vermelhas" required>
+
+                        
+
+                        <button id="btnSalvar">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="formCliente.js"></script>
+
+
+</body>
+</html>
