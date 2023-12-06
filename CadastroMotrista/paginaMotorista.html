@@ -21,6 +21,7 @@
             <li><a href="../PaginaHome/PaginaHome.html">Home</a></li>
             <li><a href="../CadastroMotrista/paginaMotorista.html">Página Motorista</a></li> 
             <li><a href="../PaginaCliente/paginaCliente.html">Pagina Cliente</a></li> 
+            <li><a href="../PaginaVeiculo/paginaVeiculo.html">Veículos</a></li>
             <li><a href="../Transportes/paginaTransportes.html">Transportes</a></li>
 
         </ul>
@@ -85,7 +86,7 @@
 
             <div class="modal-container">
                 <div class="modal">
-                    <form>
+                    <form name="form1" method="post" action="gravaMotorista.jsp">
                         <label for="m-matricula">Matricula do Motorista/Ajudante</label>
                         <input type="text" id="m-matricula" placeholder="ex: 229132" required>
 
@@ -101,7 +102,8 @@
                         <label for="m-transportadora">Transportadora</label>
                         <input type="text" id="m-transportadora" placeholder="Ex: WebLog Transportes LTDA" required>
 
-                        <button id="btnSalvar">Salvar</button>
+                        <input id="btnSalvar" type="submit" value="Grava">
+                        
                     </form>
                 </div>
             </div>
