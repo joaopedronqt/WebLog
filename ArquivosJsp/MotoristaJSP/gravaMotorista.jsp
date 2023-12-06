@@ -28,7 +28,7 @@
     conexao = DriverManager.getConnection(endereco, usuario, senha);
 
     //Criar a variavel sql com o comando insert
-    String sql = "INSERT INTO MotoristaTB (MotoristaID, Nome_Motorista, CNH_Motorista, CPF_Motorista, Transportadora_Motorista) values (?,?,?,?,?)";
+    String sql = "INSERT INTO motoristatb (MotoristaID, Nome_Motorista, CNH_Motorista, CPF_Motorista, Transportadora_Motorista) values (?,?,?,?,?)";
 
     PreparedStatement stm = conexao.prepareStatement(sql);
     stm.setInt( 1, vmatricula);

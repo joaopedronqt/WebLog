@@ -378,13 +378,13 @@ body{
     border-right: none;
   }
   
-  .modal button {
-    width: 100%;
+  .modal #btnSalvar {
     margin: 10px auto;
     outline: none;
     border-radius: 20px; 
     padding: 5px 10px; 
-    width: 100%;
+    justify-content: center;
+    width: 20%;
     border: none;
     background-color: rgb(57, 57, 226);
     color: white;
