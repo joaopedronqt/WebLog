@@ -2,8 +2,8 @@ const modal = document.querySelector('.modal-container');
 const tbody = document.querySelector('tbody');
 const sMatricula = document.querySelector('#m-matricula');
 const sNome = document.querySelector('#m-nome');
-const sEndereco = document.querySelector('#m-endereco');
-const sDataNascimento = document.querySelector('#m-dataNascimento');
+const sCNH = document.querySelector('#m-cnh');
+const sCPF = document.querySelector('#m-cpf');
 const sTransportadora = document.querySelector('#m-transportadora');
 
 let itens
@@ -12,22 +12,22 @@ let id
 function openModal(edit = false, index = 0) {
         modal.classList.add('active')
 
-        // modal.onclick = e => {
-        //     if (e.target.className.indexOf('modal-container') !== -1){
-        //         modal.classList.add('active')
-        //     }
-        // }
+        modal.onclick = e => {
+            if (e.target.className.indexOf('modal-container') !== -1){
+                modal.classList.add('active')
+            }
+        }
 
-        // if (edit) {
-        //     sNome.value = itens[index].nome
-        //     sFuncao.value = itens[index].funcao
-        //     sSalario.value = itens[index].salario
-        //     id = index
-        //   } else {
-        //     sNome.value = ''
-        //     sFuncao.value = ''
-        //     sSalario.value = ''
-        //   }
+        if (edit) {
+            sNome.value = itens[index].nome
+            sFuncao.value = itens[index].funcao
+            sSalario.value = itens[index].salario
+            id = index
+          } else {
+            sNome.value = ''
+            sFuncao.value = ''
+            sSalario.value = ''
+          }
           
         }
         
