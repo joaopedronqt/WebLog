@@ -9,8 +9,8 @@
     String  vtransportadora = request.getParameter("m-transportadora");
 
     //variaveis para o banco de dados
-    String banco = "weblog";
-    String endereco = "jdbc:mysql://localhost:8080/"+banco;
+    String banco = "weblogdb";
+    String endereco = "jdbc:mysql://localhost:4306/"+banco;
     String usuario = "root";
     String senha = "";
 
@@ -28,19 +28,30 @@
     conexao = DriverManager.getConnection(endereco, usuario, senha);
 
     //Criar a variavel sql com o comando insert
-    String sql = "INSERT INTO motoristatb (MotoristaID, Nome_Motorista, CNH_Motorista, CPF_Motorista, Transportadora_Motorista) values (?,?,?,?,?)";
+    
 
-    PreparedStatement stm = conexao.prepareStatement(sql);
-    stm.setInt( 1, vmatricula);
-    stm.setString( 2 , vnome);
-    stm.setInt( 3 , vcnh);
-    stm.setInt( 4 , vcpf);
-    stm.setString( 5 , vtransportadora);
+    //Try Catch
+    try{
+        System.out.Println("Teste");
+        
+        String sql = "INSERT INTO motoristatb (MotoristaID, Nome_Motorista, CNH_Motorista, CPF_Motorista, Transportadora_Motorista) values (?,"Guilherme Berranteiro",123456789,12345678901,"Point")";
+        PreparedStatement stm = conexao.prepareStatement(sql);
+        stm.setInt( 1, vmatricula);
+        stm.setString( 2 , vnome);
+        stm.setInt( 3 , vcnh);
+        stm.setInt( 4 , vcpf);
+        stm.setString( 5 , vtransportadora);
+    
+        stm.execute();
+        stm.close() ;
+        out.print("Dados gravados com sucesso!!!");
+        out.print("<br><br>");
+        out.print("<a href='paginaMotorista.html'>Voltar</a>");
+    }
+    catch(Exception exception){
+        System.out.Println(exception.getMessage());
+    }
 
-    stm.execute();
-    stm.close() ;
-    out.print("Dados gravados com sucesso!!!");
-    out.print("<br><br>");
-    out.print("<a href='paginaMotorista.html'>Voltar</a>");
+
 
 %>
