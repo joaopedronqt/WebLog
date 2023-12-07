@@ -9,8 +9,8 @@
     String  vtransportadora = request.getParameter("m-transportadora");
 
     //variaveis para o banco de dados
-    String banco = "web";
-    String endereco = "jdbc:mysql://localhost:3306/"+banco;
+    String banco = "weblog";
+    String endereco = "jdbc:mysql://localhost:8080/"+banco;
     String usuario = "root";
     String senha = "";
 
@@ -39,8 +39,8 @@
 
     stm.execute();
     stm.close() ;
-    // out.print("Dados gravados com sucesso!!!");
-    // out.print("<br><br>");
-    // out.print("<a href='cadastro.html'>Voltar</a>");
+    out.print("Dados gravados com sucesso!!!");
+    out.print("<br><br>");
+    out.print("<a href='paginaMotorista.html'>Voltar</a>");
 
 %>
